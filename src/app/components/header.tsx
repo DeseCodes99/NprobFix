@@ -21,7 +21,7 @@ export default function Header() {
     barToggler?.classList.toggle("max-md:scale-y-100");
   };
   return (
-    <div className="flex z-40 w-full fixed bg-black-700 justify-between items-center :h-[20%] md:h-[20%] sm:h-[20%] text-3xl max-md:p-0 max-md:flex-col">
+    <div className="flex z-40 w-full fixed bg-slate-700 justify-between items-center h-[20%] md:h-[20%] sm:h-[20%] text-3xl max-md:p-0 max-md:flex-col">
       <div className="flex w-full justify-between items-center px-4">
         <div className="flex items-center">
           <Image
