@@ -17,8 +17,8 @@ async function getEmail(e: any) {
 export default function Contact() {
   return (
     <div className=" max-md:h-fit w-full">
-      <div className="grid grid-cols-2  w-full md:h-[100vh] lg:h-[100vh] items-center justify-center bg-tan-400 text-slate-700 justify-between max-md:grid-cols-1  items-center">
-        <div className="flex flex-col h-[100%] items-center justify-center bg-gray-100 max-md:mt-10 p-10 w-full">
+      <div className="grid grid-cols-2  w-full  items-center justify-center bg-tan-400 text-slate-700 justify-between max-md:grid-cols-1  items-center">
+        <div className="flex flex-col mt-20  items-center justify-center bg-gray-100 max-md:mt-20  p-10 w-full">
           <div className="text-left">
             <h1 className="text-4xl max-md:text-3xl text-slate-950 font-bold pb-6">
               Contact Information
@@ -66,7 +66,7 @@ export default function Contact() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col  items-center  max-md:mt-10 w-full max-md:px-6">
+        <div className="flex flex-col mt-16 items-center  max-md:mt-10 w-full max-md:px-6">
          <h2 className="text-4xl max-md:text-3xl text-slate-950 font-bold pb-6 text-left w-[75%]">
             Send us a message:
         </h2>
