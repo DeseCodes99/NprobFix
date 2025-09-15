@@ -85,7 +85,7 @@ const nswSuburbsAroundBankstown = [
   "Sefton",
   "Villawood",
   "Wiley Park",
-  "Yagoona"
+  "Yagoona",
 ];
 export default function Contact() {
   return (
@@ -105,11 +105,11 @@ export default function Contact() {
               <h2 className="text-2xl text-slate-800 font-bold">Phone:</h2>
               <li className="text-xl font-semibold ">
                 Nikola:{" "}
-                 <a
+                <a
                   href="tel:+61 403 041 037"
                   className="text-xl underline font-semibold"
                 >
-                0403041037
+                  0403041037
                 </a>
               </li>
             </div>
@@ -140,9 +140,9 @@ export default function Contact() {
           </div>
         </div>
         <div className="flex flex-col mt-16 items-center  max-md:mt-10 w-full max-md:px-6">
-         <h2 className="text-4xl max-md:text-3xl text-slate-950 font-bold pb-6 text-left w-[75%]">
+          <h2 className="text-4xl max-md:text-3xl text-slate-950 font-bold pb-6 text-left w-[75%]">
             Send us a message:
-        </h2>
+          </h2>
           <form onSubmit={(e: any) => getEmail(e)} className="flex py-2">
             <div className="flex flex-col max-w-2xl gap-y-3 text-slate-700">
               <label htmlFor="email">Email:</label>
@@ -159,26 +159,26 @@ export default function Contact() {
                     type="number"
                     name="phoneNumber"
                     id=""
-                    className="border-2 border-slate-700 p-2"
+                    className="border-2 border-slate-700 h-[40px]"
                   />
                 </div>
-                <div className="flex flex-col">
-  <label htmlFor="city">Suburb:</label>
-  <select
-    name="city"
-    className="border-2 border-slate-700 p-2"
-    defaultValue=""
-  >
-    <option value="" disabled>
-      Select a suburb
-    </option>
-    {nswSuburbsAroundBankstown.map((suburb,i)=>(
-
-    <option key={i} value={suburb}>{suburb}</option>
-    ))}
-   
-  </select>
-</div>
+                <div className="flex flex-col text-slate-800">
+                  <label htmlFor="city">Suburb:</label>
+                  <select
+                    name="city"
+                    className="border-2 border-slate-700 h-[40px]"
+                    defaultValue=""
+                  >
+                    <option value="" disabled>
+                      Select a suburb
+                    </option>
+                    {nswSuburbsAroundBankstown.map((suburb, i) => (
+                      <option key={i} value={suburb}>
+                        {suburb}
+                      </option>
+                    ))}
+                  </select>
+                </div>
               </div>
               {/*  */}
               <label htmlFor="requirements">Description:</label>
