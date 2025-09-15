@@ -26,7 +26,7 @@ export default function Contact() {
             <div>
               <h1 className="text-2xl text-slate-800 font-bold">Location:</h1>
               <li className="text-xl font-semibold">Sydney</li>
-              <li className="text-xl font-semibold">NSW</li>
+              <li className="text-xl font-semibold">dese</li>
             </div>
             <div>
               <h1 className="text-2xl text-slate-800 font-bold">Phone:</h1>
