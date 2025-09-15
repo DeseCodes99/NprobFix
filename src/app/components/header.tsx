@@ -28,7 +28,7 @@ export default function Header() {
             src="/adobeProb.png"
             width={120}
             height="0"
-             className="w-20 sm:w-20 md:w-24 lg:w-28 h-auto"
+             className="w-20 sm:w-20 md:w-24 lg:w-26 h-auto"
             alt=""
           />
         </div>
