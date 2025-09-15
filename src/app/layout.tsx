@@ -25,8 +25,14 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} antialiased text-gray-800`}>
         {" "}
+        <div>
+
         <Header />
+        </div>
+        <div>
+
         {children}
+        </div>
         <div className="bg-slate-800 w-full pt-8">
           {" "}
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

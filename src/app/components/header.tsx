@@ -21,14 +21,14 @@ export default function Header() {
     barToggler?.classList.toggle("max-md:scale-y-100");
   };
   return (
-    <div className="flex z-40 w-full fixed bg-slate-700 justify-between items-center h-[20%] lg:h-[13%] md:h-[20%] sm:h-[20%] text-3xl max-md:p-0 max-md:flex-col">
+    <div className="flex z-40 w-full fixed bg-slate-700 justify-between items-center h-[20%] lg:h-[16%] md:h-[20%] sm:h-[20%] text-3xl max-md:p-0 max-md:flex-col">
       <div className="flex w-full justify-between items-center px-4">
         <div className="flex items-center">
           <Image
             src="/adobeProb.png"
-            width="140"
+            width={140}
             height="0"
-            className=""
+             className="w-24 sm:w-28 md:w-32 lg:w-36 h-auto"
             alt=""
           />
         </div>
