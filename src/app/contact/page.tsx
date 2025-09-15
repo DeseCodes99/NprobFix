@@ -13,7 +13,80 @@ async function getEmail(e: any) {
 
   return res.json();
 }
-
+const nswSuburbsAroundBankstown = [
+  "Bankstown",
+  "Belmore",
+  "Belfield",
+  "Birrong",
+  "Blakehurst",
+  "Bexley",
+  "Bexley North",
+  "Bexley South",
+  "Bexley West",
+  "Bligh Park",
+  "Botany",
+  "Burwood",
+  "Burwood Heights",
+  "Cabramatta",
+  "Cabramatta West",
+  "Canley Heights",
+  "Canley Vale",
+  "Campsie",
+  "Canterbury",
+  "Carlton",
+  "Carlton Heights",
+  "Chatswood",
+  "Chullora",
+  "Claymore",
+  "Condell Park",
+  "Croydon",
+  "Croydon Park",
+  "Dulwich Hill",
+  "Earlwood",
+  "East Hills",
+  "Enfield",
+  "Englorie Park",
+  "Fairfield",
+  "Fairfield East",
+  "Fairfield Heights",
+  "Fairfield West",
+  "Georges Hall",
+  "Greenacre",
+  "Hurlstone Park",
+  "Kingsgrove",
+  "Lakemba",
+  "Lansdowne",
+  "Leightonfield",
+  "Liverpool",
+  "Liverpool Heights",
+  "Lurnea",
+  "Marrickville",
+  "Marrickville South",
+  "Merrylands",
+  "Merrylands West",
+  "Mount Annan",
+  "Mount Kuring-gai",
+  "Mount Lewis",
+  "Narwee",
+  "Padstow",
+  "Padstow Heights",
+  "Panania",
+  "Peakhurst",
+  "Peakhurst Heights",
+  "Pennant Hills",
+  "Picnic Point",
+  "Potts Hill",
+  "Punchbowl",
+  "Regents Park",
+  "Revesby",
+  "Revesby Heights",
+  "Riverwood",
+  "Roselands",
+  "Sefton",
+  "Villawood",
+  "Wiley Park",
+  "Yagoona"
+];
 export default function Contact() {
   return (
     <div className=" max-md:h-fit w-full">
@@ -24,12 +97,12 @@ export default function Contact() {
               Contact Information
             </h1>
             <div>
-              <h1 className="text-2xl text-slate-800 font-bold">Location:</h1>
+              <h2 className="text-2xl text-slate-800 font-bold">Location:</h2>
               <li className="text-xl font-semibold">Sydney</li>
               <li className="text-xl font-semibold">NSW</li>
             </div>
             <div>
-              <h1 className="text-2xl text-slate-800 font-bold">Phone:</h1>
+              <h2 className="text-2xl text-slate-800 font-bold">Phone:</h2>
               <li className="text-xl font-semibold ">
                 Nikola:{" "}
                  <a
@@ -41,7 +114,7 @@ export default function Contact() {
               </li>
             </div>
             <div>
-              <h1 className="text-2xl text-slate-800 font-bold">Email:</h1>
+              <h2 className="text-2xl text-slate-800 font-bold">Email:</h2>
               <li>
                 <a
                   href="mailto:nProbFix1@gmail.com"
@@ -52,16 +125,16 @@ export default function Contact() {
               </li>
             </div>
             <div>
-              <h1 className="text-4xl max-md:text-3xl text-slate-950 font-bold pt-12 pb-6">
+              <h2 className="text-4xl max-md:text-3xl text-slate-950 font-bold pt-12 pb-6">
                 Opening Hours:
-              </h1>
-              <h2 className="text-2xl text-slate-800 ">
+              </h2>
+              <h3 className="text-2xl text-slate-800 font-bold">
                 Monday-Friday:
-              </h2>
+              </h3>
               <li className="text-lg font-semibold">6:00-22:00</li>
-              <h2 className="text-2xl text-slate-800 font-bold">
+              <h3 className="text-2xl text-slate-800 font-bold">
                 Saturday & Sunday
-              </h2>
+              </h3>
               <li className="text-lg font-semibold">If neccesery</li>
             </div>
           </div>
@@ -90,14 +163,22 @@ export default function Contact() {
                   />
                 </div>
                 <div className="flex flex-col">
-                  {/*  */}
-                  <label htmlFor="city">City:</label>
-                  <input
-                    type="text"
-                    name="city"
-                    className="border-2 border-slate-700 p-2"
-                  />
-                </div>
+  <label htmlFor="city">Suburb:</label>
+  <select
+    name="city"
+    className="border-2 border-slate-700 p-2"
+    defaultValue=""
+  >
+    <option value="" disabled>
+      Select a suburb
+    </option>
+    {nswSuburbsAroundBankstown.map((suburb,i)=>(
+
+    <option key={i} value={suburb}>{suburb}</option>
+    ))}
+   
+  </select>
+</div>
               </div>
               {/*  */}
               <label htmlFor="requirements">Description:</label>
