@@ -42,7 +42,7 @@ export default function Footer() {
               nProbFix1@gmail.com
             </a>
           </li>
-          <li>Location: Sydney NSW</li>
+          <li>Location: Sydney, NSW</li>
         </ul>
       </div>
       <div className="text-white text-center border-t-2 border-white py-4 text-xs">
