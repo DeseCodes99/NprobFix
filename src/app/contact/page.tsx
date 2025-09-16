@@ -106,11 +106,11 @@ export default function Contact() {
               Contact Information
             </h1>
             <div>
-              <h2 className="text-2xl text-slate-800 font-bold">Location:</h2>
+              <h2 className="text-2xl text-slate-800 font-bold">Location</h2>
               <li className="text-xl font-semibold">Sydney, NSW</li>
             </div>
             <div>
-              <h2 className="text-2xl text-slate-800 font-bold">Phone:</h2>
+              <h2 className="text-2xl text-slate-800 font-bold">Phone</h2>
               <li className="text-xl font-semibold ">
                 Nikola:{" "}
                 <a
@@ -122,7 +122,7 @@ export default function Contact() {
               </li>
             </div>
             <div>
-              <h2 className="text-2xl text-slate-800 font-bold">Email:</h2>
+              <h2 className="text-2xl text-slate-800 font-bold">Email</h2>
               <li>
                 <a
                   href="mailto:nProbFix1@gmail.com"
