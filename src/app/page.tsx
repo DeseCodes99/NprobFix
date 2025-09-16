@@ -8,7 +8,7 @@ import AboutUs from "./components/aboutUs";
 export default function Home() {
   return (
     <div className="flex flex-col  w-full items-center h-[100%] bg-tan-400">
-      <div className="w-[100%] lg:w-[70%] mt-[112px] mb-[112px]">
+      <div className="w-[100%] lg:w-[70%] lg:mt-[112px] max-md:mt-[10px] mb-[112px]">
         <Intro />
         <Category />
       </div>

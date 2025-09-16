@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Intro() {
   return (
-    <div className="relative flex items-center justify-center h-[70vh] md:h-[600px] w-full overflow-hidden">
+    <div className="relative flex items-center justify-center h-[70vh] md:h-[] w-full overflow-hidden">
       {/* Background Image with higher opacity and blur for better text readability */}
       <Image
         src="/backgroundIntro.jpg"

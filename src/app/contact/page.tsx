@@ -2,16 +2,25 @@
 
 async function getEmail(e: any) {
   e.preventDefault();
-
+  console.log(e.form);
+  const form = e.currentTarget; // this is the <form> element
+  const email = (form.email as HTMLInputElement).value;
+  const phoneNumber = (form.phoneNumber as HTMLInputElement).value;
+  const suburb = (form.city as HTMLSelectElement).value;
+  const description = (form.requirements as HTMLTextAreaElement).value;
+  // if (!e.target[0].value || !e.target[1].value) {
+  //   alert("Email and description can not be empty");
+  //   return;
+  // }
+  // console.log(email, phoneNumber, suburb, description);
   const res = await fetch(`/api/email/`, {
     method: "POST",
-    body: JSON.stringify({
-      name: e.target[0].value,
-      requirements: e.target[1].value,
-    }),
+    body: JSON.stringify({ email, phoneNumber, suburb, description }),
   });
-
-  return res.json();
+  const result = await res.json();
+  console.log(result);
+  alert(result.message);
+  return result;
 }
 const nswSuburbsAroundBankstown = [
   "Bankstown",
@@ -98,8 +107,7 @@ export default function Contact() {
             </h1>
             <div>
               <h2 className="text-2xl text-slate-800 font-bold">Location:</h2>
-              <li className="text-xl font-semibold">Sydney</li>
-              <li className="text-xl font-semibold">NSW</li>
+              <li className="text-xl font-semibold">Sydney, NSW</li>
             </div>
             <div>
               <h2 className="text-2xl text-slate-800 font-bold">Phone:</h2>
@@ -124,7 +132,7 @@ export default function Contact() {
                 </a>
               </li>
             </div>
-            <div>
+            {/* <div>
               <h2 className="text-4xl max-md:text-3xl text-slate-950 font-bold pt-12 pb-6">
                 Opening Hours:
               </h2>
@@ -136,12 +144,12 @@ export default function Contact() {
                 Saturday & Sunday
               </h3>
               <li className="text-lg font-semibold">If neccesery</li>
-            </div>
+            </div> */}
           </div>
         </div>
-        <div className="flex flex-col mt-16 items-center  max-md:mt-10 w-full max-md:px-6">
+        <div className="flex flex-col mt-32 items-center  max-md:mt-10 w-full max-md:px-6">
           <h2 className="text-4xl max-md:text-3xl text-slate-950 font-bold pb-6 text-left w-[75%]">
-            Send us a message:
+            Enquiry form
           </h2>
           <form onSubmit={(e: any) => getEmail(e)} className="flex py-2">
             <div className="flex flex-col max-w-2xl gap-y-3 text-slate-700">
