@@ -148,7 +148,7 @@ export default function Contact() {
           </div>
         </div>
         <div className="flex flex-col mt-32 items-center  max-md:mt-10 w-full max-md:px-6">
-          <h2 className="text-4xl max-md:text-3xl text-slate-950 font-bold pb-6 text-left w-[75%]">
+          <h2 className="text-4xl max-md:text-3xl text-slate-950 font-bold pb-6 text-left ">
             Enquiry form
           </h2>
           <form onSubmit={(e: any) => getEmail(e)} className="flex py-2">
